@@ -12,7 +12,7 @@ for c in range(0, 5):
             print('Valor adicionado na posicao 0...')
         else:
             for pos, p in enumerate(lista):
-                if num <= p:      # Percorre a lista: se o novo número for menor ou igual a um item da lista, ele "rouba" aquela posição e para a busca (break) 
+                if num < p:      # Percorre a lista: se o novo número for menor a um item da lista, ele "rouba" aquela posição e para a busca (break) 
                     lista.insert(pos, num)
                     print(f'Valor adicionado na posicao {pos}...')
                     break
