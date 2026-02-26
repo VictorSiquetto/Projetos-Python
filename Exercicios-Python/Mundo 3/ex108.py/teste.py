@@ -1,6 +1,6 @@
 # Exercício 108 – Formatando Moedas em Python
 
-from modulos import moeda
+import moeda
 
 p = float(input('Digite o preço: R$'))
 print(f'O dobro de {moeda.moeda(p)} é {moeda.moeda(moeda.dobro(p))}')

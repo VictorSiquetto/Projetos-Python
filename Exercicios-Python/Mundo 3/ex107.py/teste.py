@@ -1,6 +1,6 @@
 # Exercício 107 – Exercitando módulos em Python
 
-from modulos import moeda
+import moeda
 
 p = float(input('Digite o preço: R$'))
 print(f'O dobro de {p} é {moeda.dobro(p)}')
