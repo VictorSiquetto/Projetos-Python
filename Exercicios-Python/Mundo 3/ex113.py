@@ -1,26 +1,30 @@
 # Exercício 113 – Funções aprofundadas em Python
 
 def leiaInt(msg):
-    ok = False
-    while not ok:
+    while True:
         try:
-            n = str(input(msg)).strip()
-            ok = True
-            return int(n)
-        except:
-            print(f'\033[31mERRO: por favor digite um numero valido\033[0m')
-            ok = False
-        
+            n = int(input(msg))
+        except (ValueError, TypeError):
+            print(f'\033[31mERRO: por favor digite um numero inteiro valido\033[0m')
+            continue
+        except KeyboardInterrupt:
+            print(f'\033[31mERRO: usuario preferiu nao digitar esse numero\033[0m')
+            return 0
+        else:
+            return n
+
 def leiaFloat(msg):
-    ok = False
-    while not ok:
+    while True:
         try:
-            n = str(input(msg)).strip().replace(',', '.')
-            ok = True
-            return float(n)
-        except:
-            print(f'\033[31mERRO: por favor digite um numero valido\033[0m')
-            ok = False
+            n = float(input(msg))
+        except (ValueError, TypeError):
+            print(f'\033[31mERRO: por favor digite um numero real valido\033[0m')
+            continue
+        except KeyboardInterrupt:
+            print(f'\033[31mERRO: usuario preferiu nao digitar esse numero\033[0m')
+            return 0
+        else:
+            return n
 
 n1 = leiaInt('Digite um numero inteiro: ')
 n2 = leiaFloat('Digite um numero real: ')
